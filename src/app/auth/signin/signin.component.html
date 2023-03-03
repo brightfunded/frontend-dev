@@ -1,0 +1,35 @@
+<div class="login-form login-signin">
+    <div class="text-center mb-10 mb-lg-20">
+        <h3 class="font-size-h1">Log In</h3>
+        <p class="text-muted font-weight-bold">Enter your email and password</p>
+    </div>
+    <form class="form" [formGroup]="signInPasword" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <input class="form-control form-control-solid h-auto py-2 px-3" type="email" placeholder="Email"
+                name="useremail" autocomplete="off" formControlName="userEmail" />
+            <span class="text-danger" *ngIf="(formControl.userEmail.touched) && formControl.userEmail.errors?.required">
+                Email is required
+            </span>
+        </div>
+        <div class="form-group">
+            <input class="form-control form-control-solid h-auto py-2 px-3" type="password" placeholder="Password"
+                name="password" autocomplete="off" formControlName="userPassword" />
+            <span class="text-danger"
+                *ngIf="(formControl.userPassword.touched) && formControl.userPassword.errors?.required">
+                Password is required
+            </span>
+        </div>
+        <div class="form-group d-flex flex-wrap justify-content-end align-items-center">
+            <a href="javascript:;" [routerLink]="['/auth/forgot-password']" routerLinkActive="router-link-active"
+                class="text-dark-50 text-hover-primary " id="kt_login_forgot">Forgot
+                Password ?</a>
+            <button id="kt_login_signin_submit" class="btn btn-primary font-weight-bold py-2 mt-3 w-100" type="submit">Sign
+                In</button>
+        </div>
+        <div class="text-center">
+            <span class="font-weight-bold text-dark-50">Dont have an account yet?</span>
+            <a href="javascript:;" [routerLink]="['/auth/signup']" class="font-weight-bold ml-2"
+                id="kt_login_signup">Sign Up!</a>
+        </div>
+    </form>
+</div>

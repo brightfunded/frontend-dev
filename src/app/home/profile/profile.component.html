@@ -1,0 +1,119 @@
+<ul class="breadcrumb">
+    <li><a href="javascript:;" [routerLink]="['/client-area']">Funded</a></li>
+    <li><a href="javascript:;" [routerLink]="['/profile']" routerLinkActive="router-link-active">Profile</a></li>
+    <li>Personal Information</li>
+</ul>
+
+
+<div class="page">
+    <div class="tab-menu">
+        <ul>
+            <li>
+                <a href="javascript:;" [routerLink]="['/profile']" class="active">Personal Information</a>
+            </li>
+            <li>
+                <a href="javascript:;" [routerLink]="['/account-information']">Account Information</a>
+            </li>
+            <li>
+                <a href="javascript:;" [routerLink]="['/security']">Security</a>
+            </li>
+            <li>
+                <a href="javascript:;" [routerLink]="['/newsletter']">Newsletters</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="d-flex p-4 align-items-center profile-area mb-5">
+        <div class="profile-name">
+            <span>
+                {{userDetails.userName.substring(0, 1)}}
+            </span>
+        </div>
+        <div class="profile-details">
+            <h4>{{userDetails.userName}}</h4>
+            <p>{{userDetails.userEmail}}</p>
+        </div>
+    </div>
+
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <h3 class="card-title">Client</h3>
+        <div class="card card-custom gutter-b border-0 mb-5">
+            <div class="card-body p-4">
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="fname" class="mb-2">First Name</label>
+                        <input type="text" class="form-control" id="fname" formControlName="firstName">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lname" class="mb-2">Last Name</label>
+                        <input type="text" class="form-control" id="lname" formControlName="lastName">
+                    </div>
+                </div>
+                <div class="form-group row mb-0">
+                    <div class="col-md-6">
+                        <label for="title" class="mb-2">Title</label>
+                        <select class="form-control" id="title" formControlName="title">
+                            <option>Mr</option>
+                            <option>Mrs</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h3 class="card-title">Contact Info</h3>
+        <div class="card card-custom gutter-b border-0 mb-5">
+            <div class="card-body p-4">
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="phone" class="mb-2">Contact Phone</label>
+                        <input type="tel" class="form-control" id="phone" formControlName="phoneNumber">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="mb-2">Email Address</label>
+                        <input type="email" class="form-control" id="email" formControlName="userEmail">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="country" class="mb-2">Country</label>
+                        <select class="form-control" id="country" formControlName="countryCode">
+                            <option>Afghanistan</option>
+                            <option>India</option>
+                            <option>Australia</option>
+                            <option>Spain</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="city" class="mb-2">City</label>
+                        <input type="text" class="form-control" id="city" formControlName="city">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="street" class="mb-2">Street</label>
+                        <input type="text" class="form-control" id="street" formControlName="street">
+                    </div>
+                </div>
+                <div class="form-group row mb-0">
+                    <div class="col-md-6">
+                        <label for="pin" class="mb-2">Postal Code</label>
+                        <input type="text" class="form-control" id="pin" formControlName="postalCode">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="to-note">
+            Please be awre that the registration is non-transferable and can't be changed to another person. Changes in
+            your credentials can only be accepted in cases where you change your address or officially have your own
+            name changed (e.g in case of a marriage). Attempts to transfer the account to another person contradict the
+            T&Cs and can be seen as a fradulent attemp leading to a suspension of your registration.
+        </div>
+        <div class="form-group text-center">
+            <button class="btn btn-primary font-weight-bold py-3 mt-3 w-25" type="submit">Save</button>
+        </div>
+    </form>
+
+</div>

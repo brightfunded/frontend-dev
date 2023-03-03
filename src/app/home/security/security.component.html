@@ -1,0 +1,55 @@
+<ul class="breadcrumb">
+    <li><a href="javascript:;" [routerLink]="['/client-area']">Funded</a></li>
+    <li><a href="javascript:;" [routerLink]="['/profile']" routerLinkActive="router-link-active" >Profile</a></li>
+    <li>Security</li>
+</ul>
+
+
+<div class="page">
+    <div class="tab-menu">
+        <ul>
+            <li>
+                <a href="javascript:;" [routerLink]="['/profile']">Personal Information</a>
+            </li>
+            <li>
+                <a href="javascript:;" [routerLink]="['/account-information']">Account Information</a>
+            </li>
+            <li>
+                <a href="javascript:;" class="active" [routerLink]="['/security']">Security</a>
+            </li>
+            <li>
+                <a href="javascript:;" [routerLink]="['/newsletter']">Newsletters</a>
+            </li>
+        </ul>
+    </div>
+
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <h3 class="card-title">Password Change</h3>
+        <div class="card card-custom gutter-b border-0 mb-5">
+            <div class="card-body p-4">
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="cpass" class="mb-2">Current Password</label>
+                        <input type="password" class="form-control" id="cpass" formControlName="userPassword">
+                    </div>                  
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="npass" class="mb-2">New Password</label>
+                        <input type="password" class="form-control" id="npass" formControlName="cPassword">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="vpass" class="mb-2">Verify Password</label>
+                        <input type="password" class="form-control" id="vpass" formControlName="vPassword">
+                    </div>
+                </div>
+                <div class="form-group mb-0">
+                    <button class="btn btn-primary font-weight-bold py-3 mb-0" type="submit">Save</button>
+                </div>
+            </div>
+        </div>
+       
+    </form>
+</div>

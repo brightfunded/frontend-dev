@@ -1,0 +1,127 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/scss/bootstrap';
+/* Importing Bootstrap SCSS file. */
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'VisbyBold';
+}
+
+
+@font-face {
+    font-family: 'VisbyBold';
+    src: url(./assets/fonts/VisbyBold.otf);
+}
+
+@font-face {
+    font-family: 'VisbyExtraBold';
+    src: url(./assets/fonts/VisbyExtrabold.otf);
+}
+
+@font-face {
+    font-family: 'VisbyHeavy';
+    src: url(./assets/fonts/VisbyHeavy.otf);
+}
+
+@font-face {
+    font-family: 'VisbyLight';
+    src: url(./assets/fonts/VisbyLight.otf);
+}
+
+@font-face {
+    font-family: 'VisbyRegular';
+    src: url(./assets/fonts/VisbyRegular.otf);
+}
+
+@font-face {
+    font-family: 'VisbyMedium';
+    src: url(./assets/fonts/VisbyMedium.otf);
+}
+
+@font-face {
+    font-family: 'VisbySemibold';
+    src: url(./assets/fonts/VisbySemibold.otf);
+}
+
+@font-face {
+    font-family: 'VisbyThin';
+    src: url(./assets/fonts/VisbyThin.otf);
+}
+
+.font-size-base {
+    font-size: 1rem;
+}
+
+.font-size-sm {
+    font-size: 0.925rem;
+}
+
+.font-size-xs {
+    font-size: 0.8rem;
+}
+
+.font-size-lg {
+    font-size: 1.08rem;
+}
+
+.font-size-h1 {
+    font-size: 2rem !important;
+}
+
+.font-size-h2 {
+    font-size: 1.75rem !important;
+}
+
+.font-size-h3 {
+    font-size: 1.5rem !important;
+}
+
+.font-size-h4 {
+    font-size: 1.35rem !important;
+}
+
+.font-size-h5 {
+    font-size: 1.25rem !important;
+}
+
+.font-size-h6 {
+    font-size: 1.175rem !important;
+}
+
+.left-0 {
+    left: 0 !important;
+  }
+  
+  .right-0 {
+    right: 0 !important;
+  }
+  
+  .top-0 {
+    top: 0 !important;
+  }
+  
+  .bottom-0 {
+    bottom: 0 !important;
+  }
+  
+  .zindex-0 {
+    z-index: 0;
+  }
+  
+  .zindex-n1 {
+    z-index: -1;
+  }
+  
+  .zindex-1 {
+    z-index: 1;
+  }
+  
+  .zindex-2 {
+    z-index: 2;
+  }

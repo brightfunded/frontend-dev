@@ -1,0 +1,211 @@
+<ul class="breadcrumb">
+    <li><a href="javascript:;" [routerLink]="['/client-area']">Funded</a></li>
+    <li>Economic Calendar</li>
+</ul>
+
+<div class="page">
+    <h3 class="card-title">Economic Calendar</h3>
+    <div class="mb-3">
+        <h4>Day:</h4>
+        <div class="d-flex flex-wrap justify-content-between days">
+            <span>
+                <input type="radio" id="mon" name="days">
+                <label for="mon">Moday</label>
+            </span>
+            <span>
+                <input type="radio" id="tue" name="days">
+                <label for="tue">Tuesday</label>
+            </span>
+            <span>
+                <input type="radio" id="wed" name="days">
+                <label for="wed">Wednesday</label>
+            </span>
+            <span>
+                <input type="radio" id="thurs" name="days">
+                <label for="thurs">Thrusday</label>
+            </span>
+            <span>
+                <input type="radio" id="fri" name="days">
+                <label for="fri">Friday</label>
+            </span>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Impact:</h4>
+
+                <label class="checkbox checkbox-outline checkbox-low">
+                    <input type="checkbox" checked>Low
+                    <span></span>
+                </label>
+                <label class="checkbox checkbox-outline checkbox-medium">
+                    <input type="checkbox" checked>Medium
+                    <span></span>
+                </label>
+                <label class="checkbox checkbox-outline checkbox-high">
+                    <input type="checkbox" checked>High
+                    <span></span>
+                </label>
+                <label class="checkbox checkbox-outline checkbox-holiday">
+                    <input type="checkbox" checked>Holiday
+                    <span></span>
+                </label>
+
+            </div>
+            <div class="col-md-6">
+                <h4>Restrictions:</h4>
+                <label class="checkbox checkbox-outline checkbox-high">
+                    <input type="checkbox" checked>Restrictions
+                    <span></span>
+                </label>
+                <label class="checkbox checkbox-outline checkbox-no-restrcition">
+                    <input type="checkbox" checked>No restrictions
+                    <span></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <h4>Time Zone</h4>
+        <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+            <ngb-panel title="Pacific/Midway (UTC-11:00)">
+                <ng-template ngbPanelContent>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, eos. Nobis consequatur
+                    laboriosam, hic recusandae quidem aliquid delectus commodi vero ab inventore, pariatur nostrum
+                    suscipit culpa illum maiores. Tempore, aliquam.
+                </ng-template>
+            </ngb-panel>
+        </ngb-accordion>
+    </div>
+    <div class="mb-3 list-table">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="2">Description</th>
+                    <th></th>
+                    <th></th>
+                    <th>Dates</th>
+                    <th>Forecast</th>
+                    <th>Previous</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span class="ring"></span>
+                    </td>
+                    <td>
+                        Tertiary Industry Activity m/m
+                    </td>
+                    <td><img src="assets/images/yen.png" alt=""></td>
+                    <td>JPY</td>
+                    <td>
+                        15 Feb 2023 <br> 05:30 <br> Expired
+                    </td>
+                    <td>
+                        0.1
+                    </td>
+                    <td>
+                        -0.2
+                    </td>
+                </tr>
+                <tr bgcolor="red">
+                    <td>
+                        <span class="ring"></span>
+                    </td>
+                    <td>
+                        Core CPI y/y
+                    </td>
+                    <td><img src="assets/images/yen.png" alt=""></td>
+                    <td>GBP</td>
+                    <td>
+                        15 Feb 2023 <br> 08:00 <br> 0:16:22
+                    </td>
+                    <td>
+                        6.2
+                    </td>
+                    <td>
+                        6.3
+                    </td>
+                </tr>
+                <tr bgcolor="red">
+                    <td>
+                        <span class="ring"></span>
+                    </td>
+                    <td>
+                        CPI y/y
+                    </td>
+                    <td><img src="assets/images/yen.png" alt=""></td>
+                    <td>GBP</td>
+                    <td>
+                        15 Feb 2023 <br> 08:00 <br> 0:16:22
+                    </td>
+                    <td>
+                        10.3
+                    </td>
+                    <td>
+                        10.5
+                    </td>
+                </tr>
+                <tr bgcolor="red">
+                    <td>
+                        <span class="ring"></span>
+                    </td>
+                    <td>
+                        RPI y/y
+                    </td>
+                    <td><img src="assets/images/yen.png" alt=""></td>
+                    <td>GBP</td>
+                    <td>
+                        15 Feb 2023 <br> 08:00 <br> 0:16:22
+                    </td>
+                    <td>
+                        13.2
+                    </td>
+                    <td>
+                        13.4
+                    </td>
+                </tr>
+                <tr bgcolor="red">
+                    <td>
+                        <span class="ring"></span>
+                    </td>
+                    <td>
+                        PPI input m/m
+                    </td>
+                    <td><img src="assets/images/yen.png" alt=""></td>
+                    <td>GBP</td>
+                    <td>
+                        15 Feb 2023 <br> 08:00 <br> 0:16:22
+                    </td>
+                    <td>
+                        0.2
+                    </td>
+                    <td>
+                        -1.1
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="ring"></span>
+                    </td>
+                    <td>
+                        PPI Outpt m/m
+                    </td>
+                    <td><img src="assets/images/yen.png" alt=""></td>
+                    <td>GBP</td>
+                    <td>
+                        15 Feb 2023 <br> 08:00 <br> 0:16:22
+                    </td>
+                    <td>
+                       0.1
+                    </td>
+                    <td>
+                        -0.8
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

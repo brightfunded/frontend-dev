@@ -1,0 +1,143 @@
+ul.breadcrumb {
+    &.breadcrumb {
+        padding: 10px 16px;
+        list-style: none;
+        background-color: transparent;
+
+        li {
+            display: inline;
+            font-size: 18px;
+            font-family: 'VisbySemiBold';
+            color: #8b8989;
+
+            +li {
+                &:before {
+                    padding: 8px;
+                    color: #8b8989;
+                    content: "/\00a0";
+                }
+            }
+
+            a {
+                color: #0781FE;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+
+.page {
+    .tab-menu {
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                padding: 16px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: #8b8989;
+                    font-family: 'VisbySemiBold';
+
+                    &.active {
+                        color: #0781FE;
+                    }
+                }
+            }
+        }
+    }
+
+    h3 {
+        &.card-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .card-custom {
+        box-shadow: 0px 0px 10px 5px rgb(204 204 204 / 50%);
+
+        .form-group {
+            margin-bottom: 1.75rem;
+
+            .form-control {
+                &.form-control-solid {
+                    background-color: #F3F6F9;
+                    border-color: #F3F6F9;
+                    color: #464E5F;
+                    -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+                    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+                }
+            }
+
+            .checkbox {
+                display: block;
+                position: relative;
+                padding-left: 40px;
+                margin-bottom: 30px;
+                text-align: left;
+                cursor: pointer;
+                font-size: 1.1rem;
+                -webkit-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+
+                > input {
+                    position: absolute;
+                    z-index: -1;
+                    opacity: 0;
+                    &:checked{
+                        ~ span{
+                            background-color: #0781FE !important;
+                            border-color: #0781FE !important;
+                            &:after{
+                                display: block;
+                                border-color: #ffffff;
+                            }
+                        }
+                    }
+                }
+                > span {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 0.42rem;
+                    background-color: none;
+                    position: absolute;
+                    top: 1px;
+                    left: 0;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    border: 1px solid #D6D6E0;
+                    &:after{
+                        content: '';
+                        width: 8px;
+                        height: 14px;
+                        border-color: transparent;
+                        border-style: solid;
+                        border-width: 0 2px 2px 0  !important;
+                        -webkit-transform: rotate(45deg) ;
+                        transform: rotate(45deg) ;
+                        margin-top: -2px;
+                    }
+                }
+            }
+        }
+    }
+}

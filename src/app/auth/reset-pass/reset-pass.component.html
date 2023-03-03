@@ -1,0 +1,30 @@
+<div class="login-form login-signin">
+    <div class="text-center mb-10 mb-lg-20">
+        <h3 class="font-size-h1">Create New Password</h3>
+        <p class="text-muted font-weight-bold"></p>
+    </div>
+    <form class="form" [formGroup]="resetPasword" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <input class="form-control form-control-solid h-auto py-2 px-3" type="password" placeholder="Password"
+            name="password" autocomplete="off" formControlName="userPassword" />
+            <span class="text-danger" *ngIf="(formControl.userPassword.touched) && formControl.userPassword.errors?.required">
+                Password is required
+            </span>
+        </div>
+        <div class="form-group">
+            <input class="form-control form-control-solid h-auto py-2 px-3" type="password" placeholder="Confirm Password"
+            name="cpassword" autocomplete="off" formControlName="usercPassword" />
+            <span class="text-danger" *ngIf="(formControl.usercPassword.touched) && formControl.usercPassword.errors?.required">
+                Confirm Password is required
+            </span>
+        </div>
+      
+        <div class="form-group d-flex flex-wrap justify-content-end align-items-center">
+            <button id="kt_login_signin_submit" class="btn btn-primary font-weight-bold py-2 mt-3 w-100" type="submit">Reset Password</button>
+        </div>
+        <div class="text-center">
+            <span class="font-weight-bold text-dark-50">Back to Login?</span>
+            <a href="javascript:;" [routerLink]="['/auth/login']" class="font-weight-bold ml-2" id="kt_login_signup">Login</a>
+        </div>
+    </form>
+</div>

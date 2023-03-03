@@ -1,0 +1,120 @@
+ul.breadcrumb {
+    &.breadcrumb {
+        padding: 10px 16px;
+        list-style: none;
+        background-color: transparent;
+
+        li {
+            display: inline;
+            font-size: 18px;
+            font-family: 'VisbySemiBold';
+            color: #8b8989;
+
+            +li {
+                &:before {
+                    padding: 8px;
+                    color: #8b8989;
+                    content: "/\00a0";
+                }
+            }
+
+            a {
+                color: #0781FE;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.page {
+    .tab-menu {
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                padding: 16px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: #8b8989;
+                    font-family: 'VisbySemiBold';
+
+                    &.active {
+                        color: #0781FE;
+                    }
+                }
+            }
+        }
+    }
+
+    .profile-area{
+        box-shadow: 0px 0px 10px 5px rgb(204 204 204 / 50%);
+        border-radius: 0.375rem;
+        .profile-name {
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                border-radius: 50%;
+                font-size: 30px;
+                width: 100px;
+                height: 100px;
+                background-color: #C9F7F5;
+                color: #1BC5BD;
+            }
+        }
+    
+        .profile-details {
+            padding-left: 20px;
+            h4 {
+                
+            }
+    
+            p {
+                margin-bottom: 0;
+            }   
+        }
+    }
+
+    h3{
+        &.card-title{
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    }
+    .card-custom{
+        box-shadow: 0px 0px 10px 5px rgb(204 204 204 / 50%);
+        .form-group {
+            margin-bottom: 1.75rem;
+        
+            .form-control {
+                &.form-control-solid {
+                    background-color: #F3F6F9;
+                    border-color: #F3F6F9;
+                    color: #464E5F;
+                    -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+                    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+                }
+            }
+        }
+       
+    }
+
+    .to-note{
+        padding: 20px;
+        background: rgb(251 231 193 / 58%);
+        border: 3px solid #e0e000;
+        text-align: center;
+        border-radius: 0.375rem;
+    }    
+}

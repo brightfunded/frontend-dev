@@ -1,0 +1,28 @@
+.login-form {
+    &.login-signin {
+        width: 100%;
+        max-width: 450px;
+        min-width: 450px;
+        h3{
+            font-family: "VisbyExtraBold";
+            color: #0781FE;
+            font-size: 40px !important;
+        }
+    }
+    .form-group {
+        margin-bottom: 1.75rem;
+    
+        .form-control {
+            &.form-control-solid {
+                background-color: #F3F6F9;
+                border-color: #F3F6F9;
+                color: #464E5F;
+                -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+                transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+            }
+        }
+    }
+}
+

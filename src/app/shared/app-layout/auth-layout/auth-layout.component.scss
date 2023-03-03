@@ -1,0 +1,13 @@
+.flex-root {
+    -webkit-box-flex: 1;
+    flex: 1;
+    -ms-flex: 1 0 0px;
+}
+
+
+.login.login-1 {
+    .login-aside {
+        width: 100%;
+        max-width: 50%;
+    }
+}
