@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-client-area',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./client-area.component.scss']
 })
 export class ClientAreaComponent {
+  constructor(private router: Router){}
 
+  redirectFreeTrial(){
+    this.router.navigate(['/free-trial']);
+  }
 }

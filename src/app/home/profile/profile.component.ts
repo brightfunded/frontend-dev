@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { ApiService } from 'src/app/service/api.service';
 
 @Component({
@@ -10,8 +11,10 @@ import { ApiService } from 'src/app/service/api.service';
 export class ProfileComponent implements OnInit {
   userDetails: any = {};
   profileForm: FormGroup;
+  allCountries: any[] = [];
 
-  constructor(private service: ApiService) {
+  constructor(private service: ApiService,private toastr: ToastrService) {
+    this.getCountryOptions();
     this.profileForm = new FormGroup({
       firstName: new FormControl(null, Validators.required),
       lastName: new FormControl(null, Validators.required),
@@ -20,6 +23,7 @@ export class ProfileComponent implements OnInit {
       userEmail: new FormControl(null, Validators.required),
       countryCode: new FormControl(null, Validators.required),
       state: new FormControl(null, Validators.required),
+      street: new FormControl(null, Validators.required),
       postalCode: new FormControl(null, Validators.required),
       city: new FormControl(null, Validators.required)
     });
@@ -27,6 +31,12 @@ export class ProfileComponent implements OnInit {
 
   get formControl() {
     return this.profileForm.controls;
+  }
+
+  getCountryOptions() {
+    this.service.listCountry().subscribe((countries: any) => {
+      this.allCountries = countries.data;
+    })
   }
 
   ngOnInit(): void {
@@ -47,6 +57,12 @@ export class ProfileComponent implements OnInit {
   onSubmit() {
     this.service.updateUser(this.userDetails.id,this.profileForm.value).subscribe((result: any) => {
       if(result.data) {
+        this.userDetails = {
+          ...this.userDetails,
+          ...this.profileForm.value
+        };
+        localStorage.setItem('userDetails',JSON.stringify(this.userDetails));
+        this.toastr.success('your profile updated successfully');
       }
     })
   }

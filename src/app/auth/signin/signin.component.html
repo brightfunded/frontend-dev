@@ -7,9 +7,15 @@
         <div class="form-group">
             <input class="form-control form-control-solid h-auto py-2 px-3" type="email" placeholder="Email"
                 name="useremail" autocomplete="off" formControlName="userEmail" />
-            <span class="text-danger" *ngIf="(formControl.userEmail.touched) && formControl.userEmail.errors?.required">
-                Email is required
-            </span>
+                <i class="material-symbols-outlined" *ngIf="email_available">
+                    check
+                </i>
+                <span class="text-danger" *ngIf="(formControl.userEmail.touched) && formControl.userEmail.errors?.required">
+                    Email is required
+                </span>
+                <span class="text-danger" *ngIf="isMailAvailable">
+                    Email is already taken
+                </span>
         </div>
         <div class="form-group">
             <input class="form-control form-control-solid h-auto py-2 px-3" type="password" placeholder="Password"

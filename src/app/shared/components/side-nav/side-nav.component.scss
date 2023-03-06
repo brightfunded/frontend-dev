@@ -1,4 +1,4 @@
-.aside-left{
+.aside-left {
     background: #fff;
     border-radius: 8px;
     border: 2px solid #e2e2e2;
@@ -7,7 +7,8 @@
     box-shadow: 0px 0px 10px 5px rgb(204 204 204 / 50%);
     position: sticky;
     top: 20px;
-    .brand{
+
+    .brand {
         background: #0781FE;
         color: #fff;
         padding: 10px;
@@ -15,29 +16,55 @@
         text-align: center;
         margin: 0 15px;
     }
-    .menu-nav{
-        padding-left: 0;
-        list-style: none;
-        li{
-            padding-left: 60px;
-            padding-top: 30px;
-            padding-bottom: 30px;
-            &.menu-section{
-                padding: 35px 15px 20px;
-                border-bottom: 1px solid #e2e2e2;
-                h4{
-                    margin-bottom: 0;
-                }
-            }
-            &.menu-item{
-                a{
-                    color: #313235;
-                }
-            }
-            a{
-                text-decoration: none;
-            }
-        }
 
+    ng-scrollbar.scroll-event {
+        --scrollbar-size: 6px;
+        --scrollbar-thumb-color: #0781FE;
+        --scrollbar-hover-size: 12px;
+        --scrollbar-track-color: rgba(0, 0, 0, 0.05);
+        --scrollbar-border-radius: 10px;
+
+        height: 70vh;
+        max-height: 70vh;
+
+        .menu-nav {
+            padding-left: 0;
+            list-style: none;
+
+            li {
+                padding-left: 40px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+
+                &.menu-section {
+                    padding: 35px 15px 20px;
+                    border-bottom: 1px solid #e2e2e2;
+
+                    h4 {
+                        margin-bottom: 0;
+                    }
+                }
+
+                &.menu-item {
+                    a {
+                        color: #313235;
+
+                        .menu-text {
+                            display: flex;
+
+                            >span {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+
+        }
     }
+
 }

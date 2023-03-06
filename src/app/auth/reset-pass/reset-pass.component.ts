@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { ApiService } from 'src/app/service/api.service';
 
 
@@ -14,7 +15,7 @@ export class ResetPassComponent {
   email: string = '';
   token: string = '';
 
-  constructor(private service: ApiService,private router: Router,private route: ActivatedRoute) {
+  constructor(private service: ApiService,private router: Router,private route: ActivatedRoute,private toastr: ToastrService) {
     this.resetPasword = new FormGroup({
       userPassword: new FormControl(null, Validators.required),
       usercPassword: new FormControl(null, Validators.required)
@@ -34,6 +35,7 @@ export class ResetPassComponent {
     let payload = this.resetPasword.value;
     if(payload.userPassword === payload.usercPassword) {
       this.service.resetPassword(this.resetPasword.value).subscribe((result: any) =>{
+        this.toastr.success('Your password changed successfully');
         this.router.navigate(['/auth/login']);
       })
     }

@@ -31,14 +31,12 @@
                 <div class="form-group row">
                     <div class="col-md-6">
                         <label for="uname" class="mb-2">User Name</label>
-                        <input type="text" class="form-control" id="uname" formControlName="userName">
+                        <input type="text" class="form-control" id="uname" formControlName="userName" readonly>
                     </div>
                     <div class="col-md-6">
                         <label for="lang" class="mb-2">Language</label>
                         <select class="form-control" id="tzone" formControlName="languageCode">
-                            <option>English</option>
-                            <option>Odia</option>
-                            <option>Bengali</option>
+                            <option *ngFor="let item of allLanguages" [value]="item.languageCode">{{item.language}}</option>
                         </select>
                     </div>
                 </div>
@@ -46,7 +44,7 @@
                     <div class="col-md-6">
                         <label for="tzone" class="mb-2">Time Zone</label>
                         <select class="form-control" id="tzone" formControlName="timeZoneCode">
-                            <option>Autodetected</option>
+                            <option *ngFor="let item of allTimeZones" [value]="item.timeZoneCode">{{item.timeZone}}</option>
                         </select>
                     </div>
                 </div>

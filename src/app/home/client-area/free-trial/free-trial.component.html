@@ -1,0 +1,274 @@
+<ul class="breadcrumb">
+    <li><a href="javascript:;" [routerLink]="['/client-area']">Funded</a></li>
+    <li><a href="javascript:;" [routerLink]="['/client-area']" routerLinkActive="router-link-active">Client Area</a>
+    </li>
+    <li>Free Trial</li>
+</ul>
+
+
+<div class="page">
+    <ng-container *ngIf="!loginCredforFreeTrial">
+        <div class="card card-custom gutter-b border-0 mb-5">
+            <div class="card-header">
+                <h3 class="card-title d-flex align-items-center">
+                    <span class="material-symbols-outlined me-2">timer</span>Free Trial
+                </h3>
+            </div>
+            <div class="card-body p-4">
+                Use this opportunity to get the feel of our Trading Objectives without risking anything. Be disciplined
+                and
+                manage your risk carefully. Our 14-day Free Trial is a shortened version of the Bright Funded Challenge
+                so you
+                practice trading with us. Monitor your performance in the Account MetriX app.
+            </div>
+        </div>
+
+        <h3 class="card-title">Free Trial Registration</h3>
+        <div class="card card-custom gutter-b border-0 mb-5">
+            <div class="card-body p-4">
+                <h4>Trading Account Currency</h4>
+                <div class="grid ">
+                    <span>
+                        <input type="radio" id="usd" name="curr">
+                        <label for="usd">USD</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="eur" name="curr">
+                        <label for="eur">EUR</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="czk" name="curr">
+                        <label for="czk">CZK</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="gbp" name="curr">
+                        <label for="gbp">GBP</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="aud" name="curr">
+                        <label for="aud">AUD</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="cad" name="curr">
+                        <label for="cad">CAD</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="chf" name="curr">
+                        <label for="chf">CHF</label>
+                    </span>
+                </div>
+                <hr>
+                <h4>Risk Mode</h4>
+                <div class="grid single-row">
+                    <span>
+                        <input type="radio" id="normal" name="mode">
+                        <label for="normal">Normal</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="aggr" name="mode">
+                        <label for="aggr">Aggressive</label>
+                    </span>
+                </div>
+                <hr>
+                <h4>Account Balance</h4>
+                <div class="grid">
+                    <span>
+                        <input type="radio" id="10" name="balance">
+                        <label for="10">10 000 USD</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="25" name="balance">
+                        <label for="25">25 000 USD</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="50" name="balance">
+                        <label for="50">50 000 USD</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="100" name="balance">
+                        <label for="100">100 000 USD</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="200" name="balance">
+                        <label for="200">200 000 USD</label>
+                    </span>
+                </div>
+                <hr>
+                <h4>Account Type (Leverage 1:100)</h4>
+                <div class="grid single-row">
+                    <span>
+                        <input type="radio" id="bf" name="type">
+                        <label for="bf">BF</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="bfswing" name="type">
+                        <label for="bfswing">BF | Swing</label>
+                    </span>
+                </div>
+                <hr>
+                <h4>Platform</h4>
+                <div class="grid single-row">
+                    <span>
+                        <input type="radio" id="metaTrader" name="platform">
+                        <label for="metaTrader">MetaTrader</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="metaTrader5" name="platform">
+                        <label for="metaTrader5">MetaTrader5</label>
+                    </span>
+                </div>
+                <hr>
+                <div class="form-group row mb-0">
+                    <div class="col-md-12">
+                        <label class="checkbox checkbox-outline checkbox-success">
+                            <input type="checkbox" value="">I agree to the processing of personal data according to
+                            Privacy policy
+                            <span></span>
+                        </label>
+                        <label class="checkbox checkbox-outline checkbox-success">
+                            <input type="checkbox" value="">I want to subscribe to a newsletter. (Optional)
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group text-center">
+                    <button class="btn btn-primary font-weight-bold py-3 mt-3 w-25" type="submit"
+                        (click)="freeTrial()">Start Free
+                        Trail</button>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="loginCredforFreeTrial">
+        <div class="card card-custom gutter-b border-0 mb-5">
+            <div class="card-header">
+                <h3 class="card-title d-flex align-items-center">
+                    <span class="material-symbols-outlined me-2">timer</span>Login credentials for your Free Trial
+                </h3>
+            </div>
+            <div class="card-body p-4">
+                <p>
+                    Below you will find your login credentials for your Free Trial. When you open the first trade, your
+                    14-day Free Trial begins. After you connect to the trading platform, be sure to adhere to the
+                    Trading
+                    Objectives and trade with consistency and discipline. The Free Trial must be started in 7 days from
+                    this
+                    email, otherwise it will be deactivated. After the Free Trial is over, we will send you a trading
+                    account analysis.
+                </p>
+                <div class="d-flex mt-4">
+                    <a href="javascript:;" class="me-5">
+                        <div class="icon-button">
+                            <div class="icon-button_icon">
+                                <span class="material-symbols-outlined">table_chart_view</span>
+                            </div>
+                            Go to Account MetriX
+                        </div>
+                    </a>
+                    <a href="javascript:;" [routerLink]="['/client-area']" routerLinkActive="router-link-active"
+                        class="">
+                        <div class="icon-button">
+                            <div class="icon-button_icon">
+                                <span class="material-symbols-outlined">home</span>
+                            </div>
+                            Go to Client Area
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <div class="card card-custom gutter-b border-0">
+                    <div class="card-header">
+                        <h4 class="card-title d-flex align-items-center">
+                            Credentials
+                        </h4>
+                    </div>
+                    <div class="card-body p-3 py-0">
+                        <ul class="list-in-card">
+                            <li>
+                                <strong>
+                                    Login
+                                </strong>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="primary-color">2102115658</span>
+                                    <button class="btn btn-primary font-weight-bold py-2 mb-0">
+                                        Copy
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>
+                                    Master password
+                                </strong>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span>6KQDMA3</span>
+                                    <button class="btn btn-primary font-weight-bold py-2 mb-0">
+                                        Copy
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>
+                                    Server
+                                </strong>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span>BrightFunded-Demo</span>
+                                    <button class="btn btn-primary font-weight-bold py-2 mb-0">
+                                        Copy
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>
+                                    Platform: Windows
+                                </strong>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="primary-color">MetaTrader 4</span>
+                                    <button class="btn btn-primary font-weight-bold py-2 mb-0">
+                                        Download
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>
+                                    Platform: Mac
+                                </strong>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="primary-color">MetaTrader 4</span>
+                                    <button class="btn btn-primary font-weight-bold py-2 mb-0">
+                                        Download
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-custom gutter-b border-0">
+                    <div class="card-header">
+                        <h4 class="card-title d-flex align-items-center">
+                            Is this your first experience with BrightFunded
+                        </h4>
+                    </div>
+                    <div class="card-body p-4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card card-custom border-0 p-5">
+            <div class="text-center ready-to-start p-4">
+                <h3>Good Luck!!</h3>
+                <p>For now, everything is ready and you can start trading.</p>
+                <a href="javascript:;">BrightFunded team</a>
+            </div>
+        </div>
+    </ng-container>
+</div>

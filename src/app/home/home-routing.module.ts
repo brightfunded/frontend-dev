@@ -6,7 +6,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { NewsleterComponent } from './newsleter/newsleter.component';
 import { EconomicCalendarComponent } from './economic-calendar/economic-calendar.component';
 import { ClientAreaComponent } from './client-area/client-area.component';
-import { AccountInformationComponent } from './account-information/account-information.component'
+import { AccountInformationComponent } from './account-information/account-information.component';
+import { FreeTrialComponent } from './client-area/free-trial/free-trial.component'
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: "client-area",
     component: ClientAreaComponent
+  },
+  {
+    path: "free-trial",
+    component: FreeTrialComponent
   },
   {
     path: "account-information",

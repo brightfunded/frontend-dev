@@ -1,44 +1,293 @@
 <div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
     <div class="brand flex-column-auto" id="kt_brand">
-        New Bright Fundeds Challenge
+        New Bright Funded Challenge
     </div>
 
     <div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
         <div id="kt_aside_menu" class="aside-menu my-4">
-            <ul class="menu-nav">
-                <li class="menu-section">
-                    <h4 class="menu-text">Main Menu</h4>
-                </li>
-                <li class="menu-item" aria-haspopup="true">
-                    <a href="javascript:;" [routerLink]="['/client-area']" routerLinkActive="router-link-active"  class="menu-link">
-                        <span class="menu-text">Client Area</span>
-                        <i class="menu-arrow"></i>
-                    </a>
+            <ng-scrollbar class="scroll-event" thumbClass="white-scrollbars" visibility="hover" appearance="standard">
+                <ul class="menu-nav">
+                    <li class="menu-section">
+                        <h4 class="menu-text">Main Menu</h4>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" [routerLink]="['/client-area']" routerLinkActive="router-link-active"
+                            class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    home
+                                </span>
+                                Client Area</span>
+                            <i class="menu-arrow"></i>
+                        </a>
 
-                </li>
-                <li class="menu-item" aria-haspopup="true">
-                    <a href="javascript:;" [routerLink]="['/profile']" routerLinkActive="router-link-active"  class="menu-link">
-                        <span class="menu-text">Profile</span>
-                        <i class="menu-arrow"></i>
-                    </a>
-                </li>
-                <li class="menu-section">
-                    <h4 class="menu-text">Apps</h4>
-                </li>
-                <li class="menu-item" aria-haspopup="true">
-                    <a href="javascript:;" [routerLink]="['/economic-calendar']" routerLinkActive="router-link-active"  class="menu-link">
-                        <span class="menu-text">Economic Calendar</span>
-                        <i class="menu-arrow"></i>
-                    </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" [routerLink]="['/profile']" routerLinkActive="router-link-active"
+                            class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+                                Profile</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    download
+                                </span>
+                                Download</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    pending
+                                </span>
+                                Extras</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+                                Trading Academy</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    payments
+                                </span>
+                                Billing</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    group
+                                </span>
+                                FTMO Traders</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    chart_data
+                                </span>
+                                Chat with Charts</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    headset_mic
+                                </span>
+                                Customer Support</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    social_leaderboard
+                                </span>
+                                Leaderboard</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    workspace_premium
+                                </span>
+                                Certificates</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    analytics
+                                </span>
+                                Autochartlist</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">monetization_on</span>
+                                Ticker</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    headset_mic
+                                </span>
+                                BF Identity</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    dark_mode
+                                </span>
+                                Dark mode</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                </span>
+                                Back to website</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link" (click)="logout()">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                </span>
+                                Logout</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-section">
+                        <h4 class="menu-text">Apps</h4>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" [routerLink]="['/economic-calendar']"
+                            routerLinkActive="router-link-active" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    date_range
+                                </span>
+                                Economic Calendar</span>
+                            <i class="menu-arrow"></i>
+                        </a>
 
-                </li>
-                <li class="menu-item" aria-haspopup="true">
-                    <a href="javascript:;"  class="menu-link">
-                        <span class="menu-text">Account Metrix</span>
-                        <i class="menu-arrow"></i>
-                    </a>
-                </li>
-            </ul>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                </span>
+                                Account Metrix</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                </span>
+                                Statistical App</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    sync_saved_locally
+                                </span>
+                                Mentor App</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    calculate
+                                </span>
+                                Margin Calculator</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                </span>
+                                Account Analysis</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                </span>
+                                Symbols & Updates</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                </span>
+                                Trading Journal</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                </span>
+                                Equity Simulator</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link">
+                            <span class="menu-text">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                </span>
+                                Timezone Converter</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                </ul>
+            </ng-scrollbar>
         </div>
     </div>
 </div>

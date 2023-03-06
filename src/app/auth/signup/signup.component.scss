@@ -11,7 +11,13 @@
     }
     .form-group {
         margin-bottom: 1.75rem;
-    
+        position: relative;
+        i{
+            position: absolute;
+            right: 0;
+            top: 8px;
+            color: #1bc53f;
+        }
         .form-control {
             &.form-control-solid {
                 background-color: #F3F6F9;

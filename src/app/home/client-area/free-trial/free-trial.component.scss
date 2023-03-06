@@ -1,0 +1,240 @@
+.primary-color {
+    color: #0781FE;
+}
+
+ul.breadcrumb {
+    &.breadcrumb {
+        padding: 10px 16px;
+        list-style: none;
+        background-color: transparent;
+
+        li {
+            display: inline;
+            font-size: 18px;
+            font-family: 'VisbySemiBold';
+            color: #8b8989;
+
+            +li {
+                &:before {
+                    padding: 8px;
+                    color: #8b8989;
+                    content: "/\00a0";
+                }
+            }
+
+            a {
+                color: #0781FE;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+.page {
+    h3 {
+        &.card-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .card-custom {
+        box-shadow: 0px 0px 10px 5px rgb(204 204 204 / 50%);
+
+        .card-header {
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            min-height: 70px;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            h3 {
+                &.card-title {
+                    font-size: 24px;
+                    margin-bottom: 0;
+                }
+            }
+
+            h4 {
+                font-size: 18px;
+                font-family: "VisbySemiBold";
+                margin-bottom: 0;
+            }
+        }
+
+        .card-body {
+            h4 {
+                font-size: 18px;
+                font-family: "VisbySemiBold";
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-column-gap: 30px;
+                grid-row-gap: 10px;
+
+                &.single-row {
+                    grid-template-rows: repeat(1, 1fr);
+                }
+
+                span {
+                    label {
+                        background: #F4F4F4;
+                        color: #222323;
+                        padding: 10px 30px;
+                        border-radius: 8px;
+                        width: 100%;
+                        text-align: center;
+                        font-family: "VisbySemiBold";
+                        cursor: pointer;
+                    }
+
+                    input {
+                        position: absolute;
+                        z-index: -1;
+                        opacity: 0;
+
+                        &:checked {
+                            +label {
+                                background: #0781FE;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            hr {
+                margin: 1.5rem 0;
+            }
+
+            a {
+                color: #313235;
+            }
+
+            .checkbox {
+                display: block;
+                position: relative;
+                padding-left: 40px;
+                margin-bottom: 30px;
+                text-align: left;
+                cursor: pointer;
+                font-size: 1.1rem;
+                -webkit-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+
+                >input {
+                    position: absolute;
+                    z-index: -1;
+                    opacity: 0;
+
+                    &:checked {
+                        ~span {
+                            background-color: #0781FE !important;
+                            border-color: #0781FE !important;
+
+                            &:after {
+                                display: block;
+                                border-color: #ffffff;
+                            }
+                        }
+                    }
+                }
+
+                >span {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 0.42rem;
+                    background-color: none;
+                    position: absolute;
+                    top: 1px;
+                    left: 0;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    border: 1px solid #D6D6E0;
+
+                    &:after {
+                        content: '';
+                        width: 8px;
+                        height: 14px;
+                        border-color: transparent;
+                        border-style: solid;
+                        border-width: 0 2px 2px 0 !important;
+                        -webkit-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                        margin-top: -2px;
+                    }
+                }
+            }
+
+            .icon-button {
+                display: flex;
+                align-items: center;
+
+                .icon-button_icon {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 2px solid #8b8989;
+                    border-radius: 5px;
+                    margin-right: 5px;
+                }
+            }
+
+            .list-in-card {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    border-bottom: 1px solid #ccc;
+                    padding: 10px 0;
+
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .ready-to-start {
+            background: #0781FE;
+            color: #fff;
+            border-radius: 8px;
+            h3{
+                margin-bottom: 15px;
+            }
+            p{
+                margin-bottom: 0;
+            }
+            a {
+                color: #fff;
+                text-decoration: underline;
+                font-family: "VisbySemiBold";
+            }
+        }
+    }
+}

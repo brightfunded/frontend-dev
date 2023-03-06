@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { ApiService } from 'src/app/service/api.service';
 
 @Component({
@@ -10,8 +11,12 @@ import { ApiService } from 'src/app/service/api.service';
 export class AccountInformationComponent implements OnInit {
   userDetails: any = {};
   profileForm: FormGroup;
+  allLanguages: any[] = [];
+  allTimeZones: any[] = [];
 
-  constructor(private service: ApiService) {
+  constructor(private service: ApiService,private toastr: ToastrService) {
+    this.getLanguageOptions();
+    this.getTimeZoneOptions();
     this.profileForm = new FormGroup({
       userName: new FormControl(null, Validators.required),
       languageCode: new FormControl(null, Validators.required),
@@ -21,6 +26,19 @@ export class AccountInformationComponent implements OnInit {
 
   get formControl() {
     return this.profileForm.controls;
+  }
+
+  getLanguageOptions() {
+    this.service.listLanguage().subscribe((countries: any) => {
+      this.allLanguages = countries.data;
+    })
+  }
+
+
+  getTimeZoneOptions() {
+    this.service.listTimeZone().subscribe((countries: any) => {
+      this.allTimeZones = countries.data;
+    })
   }
 
   ngOnInit(): void {
@@ -36,6 +54,12 @@ export class AccountInformationComponent implements OnInit {
   onSubmit() {
     this.service.updateUser(this.userDetails.id,this.profileForm.value).subscribe((result: any) => {
       if(result.data) {
+        this.userDetails = {
+          ...this.userDetails,
+          ...this.profileForm.value
+        };
+        localStorage.setItem('userDetails',JSON.stringify(this.userDetails));
+        this.toastr.success('your profile updated successfully');
       }
     })
   }

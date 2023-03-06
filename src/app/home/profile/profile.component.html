@@ -72,17 +72,14 @@
                     </div>
                     <div class="col-md-6">
                         <label for="email" class="mb-2">Email Address</label>
-                        <input type="email" class="form-control" id="email" formControlName="userEmail">
+                        <input type="email" class="form-control" id="email" formControlName="userEmail" readonly>
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-md-6">
                         <label for="country" class="mb-2">Country</label>
                         <select class="form-control" id="country" formControlName="countryCode">
-                            <option>Afghanistan</option>
-                            <option>India</option>
-                            <option>Australia</option>
-                            <option>Spain</option>
+                            <option *ngFor="let item of allCountries" [value]="item.countryCode">{{item.countryName}}</option>
                         </select>
                     </div>
                 </div>

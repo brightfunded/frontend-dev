@@ -11,6 +11,7 @@ import { EconomicCalendarComponent } from './economic-calendar/economic-calendar
 
 import { SharedModule } from '../shared/shared.module'
 import { ReactiveFormsModule } from '@angular/forms';
+import { FreeTrialComponent } from './client-area/free-trial/free-trial.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AccountInformationComponent,
     SecurityComponent,
     NewsleterComponent,
-    EconomicCalendarComponent
+    EconomicCalendarComponent,
+    FreeTrialComponent
   ],
   imports: [
     CommonModule,

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -37,6 +38,7 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgScrollbarModule, NG_SCROLLBAR_OPTIONS } from 'ngx-scrollbar';
 
 
 @NgModule({
@@ -77,7 +79,9 @@ import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
     MatTooltipModule,
     MatTreeModule,
     MatNativeDateModule,
-    NgbAccordionModule
+    NgbAccordionModule,
+    ScrollingModule,
+    NgScrollbarModule
   ],
   exports: [
     MatAutocompleteModule,
@@ -114,7 +118,9 @@ import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
     MatTooltipModule,
     MatTreeModule,
     MatNativeDateModule,
-    NgbAccordionModule
+    NgbAccordionModule,
+    ScrollingModule,
+    NgScrollbarModule
   ]
 })
 export class ModulesModule { }
